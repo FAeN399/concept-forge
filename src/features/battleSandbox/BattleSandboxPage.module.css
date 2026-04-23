@@ -1,0 +1,312 @@
+.page {
+  background: var(--bg);
+  color: var(--ink);
+  display: grid;
+  grid-template-columns: minmax(340px, 390px) 1fr;
+  min-height: 100vh;
+  min-width: 0;
+}
+
+.sidebar {
+  background: var(--surface);
+  border-right: 1px solid var(--line);
+  min-height: 100vh;
+}
+
+.sidebarInner {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-height: 100vh;
+  overflow-y: auto;
+  padding: 18px 16px 28px;
+}
+
+.hero h1 {
+  font-family: var(--ff-serif);
+  font-size: 31px;
+  line-height: 1.05;
+  margin: 4px 0 8px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.muted {
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.panel {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 13px;
+}
+
+.sectionTitle {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.sectionTitle h2 {
+  font-size: 15px;
+  margin: 0;
+}
+
+.sectionTitleBar {
+  background: var(--accent);
+  border-radius: 999px;
+  height: 20px;
+  width: 4px;
+}
+
+.fieldGrid {
+  display: grid;
+  gap: 10px;
+}
+
+.fieldGridTwo {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.fieldGridThree {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.fieldLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fieldLabel > span,
+.sliderRow > span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.input,
+.textarea {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  color: var(--ink);
+  font: inherit;
+  padding: 9px 10px;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: color-mix(in srgb, var(--accent) 42%, var(--line));
+  outline: 2px solid color-mix(in srgb, var(--accent) 16%, transparent);
+}
+
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.sliderRow {
+  align-items: center;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto 1fr auto;
+  margin-top: 12px;
+}
+
+.metricGrid {
+  display: grid;
+  gap: 9px;
+}
+
+.metricGridTwo {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.metricCard {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  min-height: 66px;
+  padding: 9px 10px;
+}
+
+.metricCard strong {
+  display: block;
+  font-size: 14px;
+  line-height: 1.35;
+  margin-top: 6px;
+  overflow-wrap: anywhere;
+}
+
+.metricLabel {
+  color: var(--muted);
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.armyUnitGrid {
+  display: grid;
+  gap: 9px;
+  margin-top: 12px;
+}
+
+.checkboxGrid {
+  display: grid;
+  gap: 9px;
+  grid-template-columns: 1fr;
+  margin-top: 8px;
+}
+
+.checkboxLabel {
+  align-items: center;
+  color: var(--ink-2);
+  display: flex;
+  flex-direction: row;
+  gap: 9px;
+}
+
+.checkboxLabel input {
+  height: 16px;
+  margin: 0;
+  width: 16px;
+}
+
+.selectedUnitCard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.textarea {
+  font-family: var(--ff-mono);
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 12px;
+  min-height: 220px;
+  resize: vertical;
+  width: 100%;
+}
+
+.errorText {
+  color: var(--err);
+  margin: 10px 0 0;
+}
+
+.noteList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.noteList li,
+.logList li {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  line-height: 1.45;
+  padding: 9px 10px;
+}
+
+.logList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.logList li {
+  align-items: start;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto 1fr;
+}
+
+.logTime {
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+}
+
+.stage {
+  background: #081018;
+  min-height: 100vh;
+  min-width: 0;
+  position: relative;
+}
+
+.stage canvas,
+.stage > div {
+  display: block;
+  height: 100vh;
+  width: 100%;
+}
+
+.canvasFallback {
+  background: #071018;
+  color: #e2e8f0;
+  display: grid;
+  height: 100%;
+  place-items: center;
+  width: 100%;
+}
+
+@media (max-width: 1100px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-bottom: 1px solid var(--line);
+    border-right: none;
+    min-height: auto;
+  }
+
+  .sidebarInner {
+    max-height: none;
+  }
+
+  .stage,
+  .stage canvas,
+  .stage > div {
+    height: 70vh;
+    min-height: 420px;
+  }
+
+  .stage {
+    order: -1;
+  }
+}
+
+@media (max-width: 720px) {
+  .fieldGridTwo,
+  .fieldGridThree,
+  .metricGridTwo {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+}

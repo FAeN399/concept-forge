@@ -1,0 +1,109 @@
+.leftRail {
+  background: var(--surface);
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-height: 100vh;
+  padding: 14px 10px;
+  width: 78px;
+}
+
+.brand {
+  align-items: center;
+  color: var(--accent);
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
+}
+
+.domainButton {
+  align-items: center;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--r-md);
+  cursor: pointer;
+  display: flex;
+  height: 52px;
+  justify-content: center;
+  position: relative;
+  width: 56px;
+}
+
+.domainButton:hover {
+  background: var(--surface-2);
+  border-color: var(--line);
+}
+
+.domainButtonActive {
+  background: var(--accent-soft);
+  border-color: color-mix(in srgb, var(--accent) 26%, var(--line));
+  color: var(--accent);
+}
+
+.domainButton span {
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
+.topBar {
+  align-items: center;
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  gap: 14px;
+  min-height: 64px;
+  padding: 12px 18px;
+}
+
+.titleBlock {
+  flex: 1;
+  min-width: 180px;
+}
+
+.domainName {
+  font-family: var(--ff-serif);
+  font-size: 21px;
+  font-weight: 760;
+  line-height: 1.05;
+}
+
+.domainDescription {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.barGroup {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.status {
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 700;
+  gap: 6px;
+  min-height: 30px;
+  padding: 5px 10px;
+}
+
+.statusDot {
+  background: var(--ok);
+  border-radius: 50%;
+  height: 7px;
+  width: 7px;
+}
+
+.statusBusy .statusDot {
+  background: var(--warn);
+}
+
+.statusError .statusDot {
+  background: var(--err);
+}

@@ -1,0 +1,164 @@
+.panel {
+  background: var(--surface);
+  border-right: 1px solid var(--line);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 0;
+  width: 384px;
+}
+
+.header {
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+}
+
+.title {
+  font-family: var(--ff-serif);
+  font-size: 22px;
+  font-weight: 760;
+  line-height: 1.1;
+}
+
+.body {
+  display: grid;
+  gap: 10px;
+  overflow: auto;
+  padding: 12px;
+}
+
+.section {
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--surface);
+}
+
+.sectionHeader {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: auto 1fr auto;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.sectionTitle {
+  font-weight: 800;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.sectionBody {
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+}
+
+.row {
+  display: grid;
+  gap: 8px;
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.chipInput {
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-height: 42px;
+  padding: 6px;
+}
+
+.chipInput input {
+  border: 0;
+  flex: 1;
+  min-width: 110px;
+  outline: 0;
+  padding: 5px;
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.formationRow {
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  display: grid;
+  gap: 8px;
+  padding: 8px;
+}
+
+.slotGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.slot {
+  align-items: center;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px 6px;
+}
+
+.statRow {
+  align-items: center;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 46px 1fr 28px;
+}
+
+.ability {
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  display: grid;
+  gap: 8px;
+  padding: 8px;
+}
+
+.toolbar {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.warn {
+  background: color-mix(in srgb, var(--warn) 10%, white);
+  border: 1px solid color-mix(in srgb, var(--warn) 24%, var(--line));
+  border-radius: var(--r-md);
+  color: var(--warn);
+  font-size: 12px;
+  font-weight: 750;
+  padding: 8px;
+}
+
+.inferred {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}

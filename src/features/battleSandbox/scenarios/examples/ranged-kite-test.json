@@ -1,0 +1,30 @@
+{
+  "name": "Ranged kite test",
+  "seed": 2241,
+  "arena": {
+    "width": 64,
+    "depth": 24
+  },
+  "blue": {
+    "team": "blue",
+    "spawn": { "x": -20, "z": 0 },
+    "spacing": 2.5,
+    "columns": 4,
+    "units": {
+      "vanguard": 2,
+      "ranger": 16,
+      "bruiser": 0
+    }
+  },
+  "red": {
+    "team": "red",
+    "spawn": { "x": 20, "z": 0 },
+    "spacing": 2.2,
+    "columns": 4,
+    "units": {
+      "vanguard": 12,
+      "ranger": 0,
+      "bruiser": 6
+    }
+  }
+}

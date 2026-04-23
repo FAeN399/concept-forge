@@ -1,0 +1,30 @@
+{
+  "name": "Heavy vs swarm",
+  "seed": 1037,
+  "arena": {
+    "width": 54,
+    "depth": 34
+  },
+  "blue": {
+    "team": "blue",
+    "spawn": { "x": -17, "z": 0 },
+    "spacing": 2.8,
+    "columns": 3,
+    "units": {
+      "vanguard": 6,
+      "ranger": 4,
+      "bruiser": 8
+    }
+  },
+  "red": {
+    "team": "red",
+    "spawn": { "x": 17, "z": 0 },
+    "spacing": 2.1,
+    "columns": 6,
+    "units": {
+      "vanguard": 18,
+      "ranger": 10,
+      "bruiser": 1
+    }
+  }
+}

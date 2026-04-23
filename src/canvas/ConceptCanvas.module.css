@@ -1,0 +1,157 @@
+.canvasShell {
+  background: var(--bg-soft);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-width: 0;
+}
+
+.toolbar {
+  align-items: center;
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  min-height: 48px;
+  padding: 8px 12px;
+}
+
+.toolbarMeta {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.viewport {
+  min-height: 0;
+  overflow: auto;
+  position: relative;
+}
+
+.plane {
+  min-height: 100%;
+  min-width: 100%;
+  position: relative;
+}
+
+.blockCard {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-md);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+  position: absolute;
+}
+
+.blockCardSelected {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft), var(--shadow-lg);
+}
+
+.blockHeader {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  cursor: default;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: auto 1fr auto;
+  min-height: 46px;
+  padding: 8px 9px;
+}
+
+.draggable {
+  cursor: grab;
+}
+
+.blockTitle {
+  min-width: 0;
+}
+
+.blockTitle strong {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.blockType {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.blockActions {
+  align-items: center;
+  display: flex;
+  gap: 2px;
+}
+
+.blockBody {
+  overflow: auto;
+  padding: 12px;
+}
+
+.footer {
+  align-items: center;
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
+  min-height: 34px;
+  padding: 7px 12px;
+}
+
+.emptyState,
+.errorState {
+  align-items: center;
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+  min-height: 420px;
+  padding: 32px;
+  text-align: center;
+}
+
+.emptyState h2,
+.errorState h2 {
+  font-family: var(--ff-serif);
+  font-size: 26px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.emptyState p,
+.errorState p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.loadingOverlay {
+  align-items: center;
+  background: rgb(246 244 239 / 0.78);
+  bottom: 0;
+  display: grid;
+  justify-items: center;
+  left: 0;
+  padding: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 5;
+}
+
+.loadingPanel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  gap: 10px;
+  min-width: 320px;
+  padding: 18px;
+}
