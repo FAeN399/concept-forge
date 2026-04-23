@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { TEAM_COLORS } from '../scenarios/defaultScenario';
 import { selectArchetypeIds, useBattleSandboxStore } from '../store/useBattleSandboxStore';
 import type { TeamId, UnitState } from '../types';
+import { useSessionStore } from '@/state/useSessionStore';
 import styles from '../BattleSandboxPage.module.css';
 
 function formatSeconds(value: number): string {
@@ -265,6 +266,7 @@ export function BattleHud() {
   const toggleViewOption = useBattleSandboxStore(
     (state) => state.toggleViewOption,
   );
+  const setWorkspaceMode = useSessionStore((state) => state.setWorkspaceMode);
 
   const selectedUnit =
     runtime.units.find((unit) => unit.id === selectedUnitId) ?? null;
@@ -279,6 +281,13 @@ export function BattleHud() {
   return (
     <div className={styles.sidebarInner}>
       <header className={styles.hero}>
+        <button
+          type="button"
+          className={styles.backButton}
+          onClick={() => setWorkspaceMode('forge')}
+        >
+          ← Back to Concept Forge
+        </button>
         <p className={styles.eyebrow}>Three.js battle test arena</p>
         <h1>Battle Sandbox</h1>
         <p className={styles.muted}>
